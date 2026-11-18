@@ -1,0 +1,172 @@
+:root {
+    --primario: #1e3a8a;
+    --secundario: #f59e0b;
+    --fondo: #f3f4f6;
+    --blanco: #ffffff;
+    --texto: #1f2937;
+    --peligro: #dc2626;
+    --peligro-fondo: #fee2e2;
+    --exito: #16a34a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-bottom: 4px solid var(--secundario);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: var(--blanco);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: var(--primario);
+    font-size: 1.25rem;
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+input {
+    padding: 0.6rem;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 0.95rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primario);
+}
+
+.acciones-form {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 0.8rem;
+}
+
+button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.btn-primario { background-color: var(--primario); color: var(--blanco); }
+.btn-secundario { background-color: #6b7280; color: var(--blanco); }
+.btn-vender { background-color: var(--exito); color: var(--blanco); padding: 0.35rem 0.7rem; font-size: 0.8rem; }
+.btn-eliminar { background-color: var(--peligro); color: var(--blanco); padding: 0.35rem 0.7rem; font-size: 0.8rem; }
+
+.header-tabla {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tabla-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background-color: #f8fafc;
+    font-weight: 700;
+    color: var(--primario);
+}
+
+/* Estilo para fila agotada */
+tr.fila-agotada {
+    background-color: var(--peligro-fondo);
+}
+
+.badge-agotado {
+    background-color: var(--peligro);
+    color: var(--blanco);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.badge-disponible {
+    background-color: #dcfce7;
+    color: var(--exito);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.alerta {
+    background-color: var(--peligro-fondo);
+    border-left: 5px solid var(--peligro);
+    color: #991b1b;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.oculto {
+    display: none;
+}
